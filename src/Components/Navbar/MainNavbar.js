@@ -5,12 +5,19 @@ const MainNavbar = () => {
     return (
         <Navbar className="navigation-agileits">
             <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-header nav_2"/>
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    className="navbar-header nav_2"
+                />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="nav navbar-nav ">
                         <Nav.Link href="#home">Home</Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Groceries" id="basic-nav-dropdown" className="multi-column-dropdown">
+                        <NavDropdown
+                            title="Groceries"
+                            id="basic-nav-dropdown"
+                            className="multi-column-dropdown"
+                        >
                             <NavDropdown.Item href="#action/3.1">
                                 <h6>All Groceries</h6>
                             </NavDropdown.Item>
@@ -24,14 +31,137 @@ const MainNavbar = () => {
                             <NavDropdown.Item href="#action/3.3">
                                 Cashews
                             </NavDropdown.Item>
-                            
                             <NavDropdown.Item href="#action/3.4">
-                                Separated link
+                                Dry Fruit
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Mukhwas
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Rice & Rice Products
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <NavDropdown
+                            title="Household"
+                            id="basic-nav-dropdown"
+                            className="multi-column-dropdown"
+                        >
+                            <NavDropdown.Item href="#action/3.1">
+                                <h6>All Household</h6>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.1">
+                                Cookware
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Dust Pans
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                Scrubbers
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Dust Cloth
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Mops
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Kitchenware
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown
+                            title="Personal Care"
+                            id="basic-nav-dropdown"
+                            className="multi-column-dropdown"
+                        >
+                            <NavDropdown.Item href="#action/3.1">
+                                <h6>Baby Care</h6>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.1">
+                                Baby Soap
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Baby Care Accessories
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                Baby Oil & Shampoos
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Baby Creams & Lotion
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Baby Powder
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Diapers & Wipes
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown
+                            title="Packaged Foods"
+                            id="basic-nav-dropdown"
+                            className="multi-column-dropdown"
+                        >
+                            <NavDropdown.Item href="#action/3.1">
+                                <h6>All Accessories</h6>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.1">
+                                Baby Food
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Desert Items
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                Biscuits
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Breakfast Cereals
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Canned Food
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Chocolates & Sweets
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown
+                            title="Beverages"
+                            id="basic-nav-dropdown"
+                            className="multi-column-dropdown"
+                        >
+                            <NavDropdown.Item href="#action/3.1">
+                                <h6>All Accessories</h6>
+                            </NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.1">
+                                Tea & Coffee
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Green Tea
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                Ground Coffee
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Herbal Tea
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Instant Coffee
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Tea
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                Tea Bags
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="#gourmet">Gourmet</Nav.Link>
+                        <Nav.Link href="#link">Offers</Nav.Link>
+                        <Nav.Link href="#link">Contact</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <nav className="navbar navbar-default">
+                {/* <nav className="navbar navbar-default">
                     <div
                         className="collapse navbar-collapse"
                         id="bs-megadropdown-tabs"
@@ -42,7 +172,6 @@ const MainNavbar = () => {
                                     Home
                                 </a>
                             </li>
-                            {/* <!-- Mega Menu --> */}
                             <li className="dropdown">
                                 <a
                                     href="/"
@@ -299,7 +428,7 @@ const MainNavbar = () => {
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </nav> */}
             </Container>
         </Navbar>
     );

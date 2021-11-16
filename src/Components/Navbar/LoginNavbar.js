@@ -1,12 +1,14 @@
 import React from 'react';
 // import './LoginNavbar.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Container, Form, Button, Nav } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const LoginNavbar = () => {
     return (
         <div className="agileits_header">
-            <div className="container">
+            <Container>
                 <div className="w3l_offers">
                     <p>
                         SALE UP TO 70% OFF. USE CODE "SALE70%" .{' '}
@@ -16,32 +18,35 @@ const LoginNavbar = () => {
                 <div className="agile-login">
                     <ul>
                         <li>
-                            <a href="registered.html"> Create Account </a>
+                            <NavLink to="">Create Account</NavLink>
                         </li>
                         <li>
-                            <a href="login.html">Login</a>
+                            <NavLink to="">Login</NavLink>
                         </li>
                         <li>
-                            <a href="contact.html">Help</a>
+                            <NavLink to="">Help</NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className="product_list_header">
-                    <form action="#" method="post" className="last">
-                        <input type="hidden" name="cmd" value="_cart" />
-                        <input type="hidden" name="display" value="1" />
-                        <button
+                    <Form className="last">
+                        <Form.Control type="hidden" name="cmd" value="_cart" />
+                        <Form.Control type="hidden" name="display" value="1" />
+                        <Button
                             className="w3view-cart"
                             type="submit"
                             name="submit"
                             value=""
                         >
-                            <FontAwesomeIcon icon={faCartArrowDown} className="fa" />
-                        </button>
-                    </form>
+                            <FontAwesomeIcon
+                                icon={faCartArrowDown}
+                                className="fa"
+                            />
+                        </Button>
+                    </Form>
                 </div>
                 <div className="clearfix"> </div>
-            </div>
+            </Container>
         </div>
     );
 };

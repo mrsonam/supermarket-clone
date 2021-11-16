@@ -1,11 +1,12 @@
 import React from 'react';
+import { Form, Button, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const SearchBar = () => {
     return (
         <div class="logo_products">
-            <div class="container">
+            <Container>
                 <div class="w3ls_logo_products_left1">
                     <ul class="phone_email">
                         <li>
@@ -20,7 +21,7 @@ const SearchBar = () => {
                     </h1>
                 </div>
                 <div class="w3l_search">
-                    <form action="#" method="post">
+                    <Form>
                         <input
                             type="search"
                             name="Search"
@@ -35,11 +36,11 @@ const SearchBar = () => {
                             <FontAwesomeIcon icon={faSearch} className="searchIcon"/>
                         </button>
                         <div class="clearfix"></div>
-                    </form>
+                    </Form>
                 </div>
 
                 <div class="clearfix"> </div>
-            </div>
+            </Container>
         </div>
     );
 };
