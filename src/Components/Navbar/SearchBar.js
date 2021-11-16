@@ -1,7 +1,8 @@
 import React from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPhone, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const SearchBar = () => {
     return (
@@ -10,14 +11,14 @@ const SearchBar = () => {
                 <div class="w3ls_logo_products_left1">
                     <ul class="phone_email">
                         <li>
-                            <FontAwesomeIcon icon={faPhone} className="phoneIcon"/>Order
+                            <FontAwesomeIcon icon={faPhoneAlt} className="phoneIcon"/>Order
                             online or call us : (+0123) 234 567
                         </li>
                     </ul>
                 </div>
                 <div class="w3ls_logo_products_left">
                     <h1>
-                        <a href="index.html">super Market</a>
+                        <Link to="index.html">super Market</Link>
                     </h1>
                 </div>
                 <div class="w3l_search">
