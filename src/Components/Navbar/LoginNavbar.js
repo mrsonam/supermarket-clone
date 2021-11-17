@@ -18,13 +18,13 @@ const LoginNavbar = () => {
                 <div className="agile-login">
                     <ul>
                         <li>
-                            <NavLink to="">Create Account</NavLink>
+                            <NavLink to="/signup">Create Account</NavLink>
                         </li>
                         <li>
-                            <NavLink to="">Login</NavLink>
+                            <NavLink to="/login">Login</NavLink>
                         </li>
                         <li>
-                            <NavLink to="">Help</NavLink>
+                            <NavLink to="/contact">Help</NavLink>
                         </li>
                     </ul>
                 </div>

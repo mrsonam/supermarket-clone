@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faMapMarkerAlt,
@@ -34,9 +34,9 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faEnvelope} />
                                     </i>
-                                    <Link to="mailto:info@example.com">
+                                    <a href="mailto:info@example.com">
                                         info@example.com
-                                    </Link>
+                                    </a>
                                 </li>
                                 <li>
                                     <i>
@@ -53,31 +53,31 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="about.html">About Us</Link>
+                                    <Link to="/about">About Us</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="contact.html">Contact Us</Link>
+                                    <Link to="/contact">Contact Us</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="short-codes.html">Short Codes</Link>
+                                    <Link to="/short-codes">Short Codes</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="faq.html">FAQ's</Link>
+                                    <Link to="/faq">FAQ's</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="products.html">Special Products</Link>
+                                    <Link to="/products">Special Products</Link>
                                 </li>
                             </ul>
                         </div>
@@ -88,19 +88,19 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="groceries.html">Groceries</Link>
+                                    <Link to="/groceries">Groceries</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="household.html">Household</Link>
+                                    <Link to="/household">Household</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="personalcare.html">
+                                    <Link to="/personalcare">
                                         Personal Care
                                     </Link>
                                 </li>
@@ -108,7 +108,7 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="packagedfoods.html">
+                                    <Link to="/packagedfoods">
                                         Packaged Foods
                                     </Link>
                                 </li>
@@ -116,7 +116,7 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="beverages.html">Beverages</Link>
+                                    <Link to="/beverages">Beverages</Link>
                                 </li>
                             </ul>
                         </div>
@@ -127,25 +127,25 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="products.html">Store</Link>
+                                    <Link to="/products">Store</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="checkout.html">My Cart</Link>
+                                    <Link to="/checkout">My Cart</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="login.html">Login</Link>
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="registered.html">Create Account</Link>
+                                    <Link to="/signup">Create Account</Link>
                                 </li>
                             </ul>
                         </div>
@@ -157,7 +157,7 @@ const Footer = () => {
                     <div class="container">
                         <p>
                             © 2017 Super Market. All rights reserved | Design by{' '}
-                            <Link to="http://w3layouts.com/">W3layouts</Link>
+                            <Link to="/http://w3layouts.com/">W3layouts</Link>
                         </p>
                     </div>
                 </div>
@@ -167,29 +167,29 @@ const Footer = () => {
                     <div class="w3layouts-foot">
                         <ul>
                             <li>
-                                <Link to="#" class="w3_agile_facebook">
+                                <a href="https://www.facebook.com/" target="__blank" class="w3_agile_facebook">
                                     <FontAwesomeIcon icon={faFacebookF}/>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to="#" class="agile_twitter">
+                                <a href="https://www.twitter.com/" target="__blank" class="agile_twitter">
                                 <FontAwesomeIcon icon={faTwitter}/>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to="#" class="w3_agile_dribble">
+                                <a href="https://www.dribbble.com/" target="__blank" class="w3_agile_dribble">
                                 <FontAwesomeIcon icon={faDribbble}/>
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link to="#" class="w3_agile_vimeo">
+                                <a href="https://www.vimeo.com/" target="__blank" class="w3_agile_vimeo">
                                 <FontAwesomeIcon icon={faVimeoV}/>
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class="payment-w3ls">
-                        <img
+                        <Image fluid={true}
                             src={card}
                             alt=" "
                             class="img-responsive"

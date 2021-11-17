@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import b1 from "../../images/b1.jpg"
 import b3 from "../../images/b3.jpg"
@@ -8,10 +8,10 @@ import b3 from "../../images/b3.jpg"
 const HomeCarousel = () => {
     return (
         <div>
-            <Carousel fade>
+            <Carousel fade controls={false} indicators={false}>
                 <Carousel.Item>
                     <Link to="/beverages">
-                        <img
+                        <Image fluid={true}
                             className="d-block w-100"
                             src={b1}
                             alt="First slide"
@@ -20,7 +20,7 @@ const HomeCarousel = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <Link to="/personalcare">
-                        <img
+                        <Image fluid={true}
                             className="d-block w-100"
                             src={b3}
                             alt="Second slide"
@@ -29,7 +29,7 @@ const HomeCarousel = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <Link to="household">
-                        <img
+                        <Image fluid={true}
                             className="d-block w-100"
                             src={b1}
                             alt="Third slide"
