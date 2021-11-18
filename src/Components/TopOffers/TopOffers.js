@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Container, Image, Tabs, Tab, Row, Col } from 'react-bootstrap';
+import { Container, Image, Tabs, Tab, Row, Col, Form } from 'react-bootstrap';
 import offer from '../../images/offer.png';
 import img1 from '../../images/1.png';
 import img2 from '../../images/2.png';
@@ -107,64 +107,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Fortune Sunflower Oil"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="20.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -238,64 +238,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="basmati rise"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="20.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -369,64 +369,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Pepsi soft drink"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="40.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -506,64 +506,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Fortune Sunflower Oil"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="35.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -637,64 +637,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="basmati rise"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="30.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -775,64 +775,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Pepsi soft drink"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="80.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -924,64 +924,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Fortune Sunflower Oil"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="35.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -1055,64 +1055,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="basmati rise"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="30.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -1193,64 +1193,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Pepsi soft drink"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="80.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -1330,64 +1330,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Fortune Sunflower Oil"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="20.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -1461,64 +1461,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="basmati rise"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="20.99"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>
@@ -1592,64 +1592,64 @@ const TopOffers = () => {
                                                                     </h4>
                                                                 </div>
                                                                 <div class="snipcart-details top_brand_home_details">
-                                                                    <form
+                                                                    <Form
                                                                         action="#"
                                                                         method="post"
                                                                     >
                                                                         <fieldset>
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cmd"
                                                                                 value="_cart"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="add"
                                                                                 value="1"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="business"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="item_name"
                                                                                 value="Pepsi soft drink"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="amount"
                                                                                 value="40.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="discount_amount"
                                                                                 value="1.00"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="currency_code"
                                                                                 value="USD"
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="hidden"
                                                                                 name="cancel_return"
                                                                                 value=" "
                                                                             />
-                                                                            <input
+                                                                            <Form.Control
                                                                                 type="submit"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
                                                                             />
                                                                         </fieldset>
-                                                                    </form>
+                                                                    </Form>
                                                                 </div>
                                                             </div>
                                                         </figure>

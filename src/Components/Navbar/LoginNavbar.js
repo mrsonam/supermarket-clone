@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Form, Button, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const LoginNavbar = () => {
     return (
@@ -12,7 +12,7 @@ const LoginNavbar = () => {
                 <div className="w3l_offers">
                     <p>
                         SALE UP TO 70% OFF. USE CODE "SALE70%" .{' '}
-                        <a href="products.html">SHOP NOW</a>
+                        <Link to="/products">SHOP NOW</Link>
                     </p>
                 </div>
                 <div className="agile-login">

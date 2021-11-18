@@ -2004,12 +2004,12 @@ a.callbacks1_s3:focus {
     text-align: center;
     margin: 0;
 }
-.social-icons ul li a.fa {
+.social-icons ul li a {
     font-size: 1em;
     color: #fff;
     line-height: 2.6em;
 }
-.social-icons.caption ul li a.fa {
+.social-icons.caption ul li a {
     margin: 0 0.5em;
     line-height: inherit;
     -webkit-transition: 0.5s all;
@@ -2018,7 +2018,7 @@ a.callbacks1_s3:focus {
     -ms-transition: 0.5s all;
     transition: 0.5s all;
 }
-.about-team-grids:hover .caption {
+.col-md-3:hover > .caption {
     display: block;
     top: 49.2%;
     opacity: 1;

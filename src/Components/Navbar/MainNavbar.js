@@ -24,31 +24,55 @@ const MainNavbar = () => {
                                 <NavDropdown.Item>
                                     <h6>All Groceries</h6>
                                 </NavDropdown.Item>
-                                
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>
+
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
                                         Dals & Pulses
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>Almonds</NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>Cashews</NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
+                                        Almonds
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
+                                        Cashews
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
                                         Dry Fruit
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>Mukhwas</NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/groceries">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
+                                        Mukhwas
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/groceries"
+                                    >
                                         Rice & Rice Products
-                                    </NavDropdown.Item>
-                                </NavLink>
+                                    </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown
                                 title="Household"
@@ -58,35 +82,55 @@ const MainNavbar = () => {
                                 <NavDropdown.Item>
                                     <h6>All Household</h6>
                                 </NavDropdown.Item>
-                                
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>
+
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
                                         Cookware
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
                                         Dust Pans
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
                                         Scrubbers
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
                                         Dust Cloth
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>Mops</NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/household">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
+                                        Mops
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/household"
+                                    >
                                         Kitchenware
-                                    </NavDropdown.Item>
-                                </NavLink>
+                                    </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown
                                 title="Personal Care"
@@ -96,37 +140,55 @@ const MainNavbar = () => {
                                 <NavDropdown.Item>
                                     <h6>Baby Care</h6>
                                 </NavDropdown.Item>
-                                
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Baby Soap
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Baby Care Accessories
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Baby Oil & Shampoos
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Baby Creams & Lotion
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Baby Powder
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/personalcare">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/personalcare"
+                                    >
                                         Diapers & Wipes
-                                    </NavDropdown.Item>
-                                </NavLink>
+                                    </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown
                                 title="Packaged Foods"
@@ -136,37 +198,55 @@ const MainNavbar = () => {
                                 <NavDropdown.Item>
                                     <h6>All Accessories</h6>
                                 </NavDropdown.Item>
-                                
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Baby Food
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Desert Items
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Biscuits
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Breakfast Cereals
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Canned Food
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/packagedfoods">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/packagedfoods"
+                                    >
                                         Chocolates & Sweets
-                                    </NavDropdown.Item>
-                                </NavLink>
+                                    </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown
                                 title="Beverages"
@@ -176,35 +256,55 @@ const MainNavbar = () => {
                                 <NavDropdown.Item>
                                     <h6>Tea & Coffee</h6>
                                 </NavDropdown.Item>
-                                
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>
+
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
                                         Green Tea
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
                                         Ground Coffee
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
                                         Herbal Tea
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
                                         Instant Coffee
-                                    </NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>Tea</NavDropdown.Item>
-                                </NavLink>
-                                <NavLink className="nav-link" to="/beverages">
-                                    <NavDropdown.Item>
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
+                                        Tea
+                                    </NavLink>
+                                </NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <NavLink
+                                        className="nav-link"
+                                        to="/beverages"
+                                    >
                                         Tea Bags
-                                    </NavDropdown.Item>
-                                </NavLink>
+                                    </NavLink>
+                                </NavDropdown.Item>
                             </NavDropdown>
                             <NavLink className="nav-link" to="/gourmet">
                                 Gourmet

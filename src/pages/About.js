@@ -2,6 +2,8 @@ import React from 'react'
 import AboutUs from '../Components/AboutUs/AboutUs'
 import BreadCrumbs from '../Components/BreadCrumbs/BreadCrumbs'
 import { Helmet } from 'react-helmet'
+import AboutSlider from '../Components/AboutSlider/AboutSlider'
+import AboutTeam from '../Components/AboutTeam/AboutTeam'
 
 const About = () => {
     return (
@@ -11,6 +13,8 @@ const About = () => {
             </Helmet>
             <BreadCrumbs page="About"/>
             <AboutUs/>
+            <AboutSlider/>
+            <AboutTeam/>
         </div>
     )
 }

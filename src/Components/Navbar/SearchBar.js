@@ -18,7 +18,7 @@ const SearchBar = () => {
                 </div>
                 <div class="w3ls_logo_products_left">
                     <h1>
-                        <Link to="index.html">super Market</Link>
+                        <Link to="/">super Market</Link>
                     </h1>
                 </div>
                 <div class="w3l_search">

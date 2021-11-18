@@ -157,7 +157,7 @@ const Footer = () => {
                     <div class="container">
                         <p>
                             © 2017 Super Market. All rights reserved | Design by{' '}
-                            <Link to="/http://w3layouts.com/">W3layouts</Link>
+                            <a href="http://w3layouts.com/">W3layouts</a>
                         </p>
                     </div>
                 </div>
