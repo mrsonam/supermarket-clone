@@ -444,7 +444,9 @@ button.w3view-cart:focus {
 .snipcart-details input.button:hover {
     background: #fe9126;
 }
-.product_list_header button, .product_list_header button:hover, .product_list_header button:focus{
+.product_list_header button,
+.product_list_header button:hover,
+.product_list_header button:focus {
     color: #fff;
     font-size: 14px;
     outline: none;
@@ -561,10 +563,10 @@ button.w3view-cart:focus {
 div#myTabContent {
     padding: 40px 40px;
 }
-.nav-tabs > li{
-  width: 50%;
+.nav-tabs > li {
+    width: 50%;
 }
-.nav-tabs > li > button{
+.nav-tabs > li > button {
     width: 100%;
 }
 .nav-tabs > li > button {
@@ -592,7 +594,7 @@ div#myTabContent {
     color: #fff;
     background: #fe9126;
 }
-.nav-tabs > li > button.active{
+.nav-tabs > li > button.active {
     background: #fe9126;
 }
 .nav-tabs {
@@ -1128,7 +1130,7 @@ margin:1em 0;
 }
 .register-home a:hover {
     background: #fe9126;
-	color: #fff;
+    color: #fff;
 }
 /*-- //register --*/
 /*-- checkout --*/
@@ -1816,8 +1818,30 @@ h2.w3_agile_header:after {
 #slider4-pager li {
     display: inline-block;
 }
-.main-carousel{
-	width: 100%;
+.main-carousel {
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 500px;
+}
+.main-carousel img{
+    width: 100%;
+}
+.main-carousel .slide-desc h3{
+    font-size: 50px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 500px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .rslides {
     position: relative;

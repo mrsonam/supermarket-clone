@@ -13,7 +13,7 @@ const Home = () => {
             <Helmet>
                 <title>Home</title>
             </Helmet>
-            {/* <MainCarousel/> */}
+            <MainCarousel/>
             <TopOffers/>
             <HomeCarousel/>
             <BannerBottom/>

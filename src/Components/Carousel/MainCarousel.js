@@ -1,13 +1,13 @@
 import React from 'react';
-import { Carousel, Col } from 'react-bootstrap';
+import { Carousel, Col, Row } from 'react-bootstrap';
 import img11 from '../../images/11.jpg';
 import img22 from '../../images/22.jpg';
 import img44 from '../../images/44.jpg';
 
 const MainCarousel = () => {
     return (
-        <Col md={12}>
-            <Carousel fade controls={false} indicators={false} className="main-carousel">
+        <div className="main-carousel">
+            <Carousel fade controls={false} indicators={false}>
                 <Carousel.Item>
                     <img src={img11} alt="" />
                     <div className="slide-desc">
@@ -27,7 +27,7 @@ const MainCarousel = () => {
                     </div>
                 </Carousel.Item>
             </Carousel>
-        </Col>
+        </div>
     );
 };
 

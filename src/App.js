@@ -17,14 +17,19 @@ import PersonalCare from './pages/PersonalCare';
 import PackagedFoods from './pages/PackagedFoods';
 import Beverages from './pages/Beverages';
 import Contact from './pages/Contact';
+import ScrollToTop from 'react-scroll-up';
+import arrow from "./images/arrow.png"
 
 function App() {
     return (
         <Router>
+            <ScrollToTop id="toTop" showUnder={160}>
+                <img src={arrow} alt="" />
+            </ScrollToTop>
             <Navbar />
             <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/about" element={<About />} />
                 <Route exact path="/offers" element={<Offers />} />
                 <Route exact path="/signup" element={<Signup />} />
                 <Route exact path="/login" element={<Login />} />
@@ -34,7 +39,11 @@ function App() {
                 <Route exact path="/groceries" element={<Groceries />} />
                 <Route exact path="/household" element={<Household />} />
                 <Route exact path="/personalcare" element={<PersonalCare />} />
-                <Route exact path="/packagedfoods" element={<PackagedFoods />} />
+                <Route
+                    exact
+                    path="/packagedfoods"
+                    element={<PackagedFoods />}
+                />
                 <Route exact path="/beverages" element={<Beverages />} />
                 <Route exact path="/contact" element={<Contact />} />
             </Routes>
