@@ -2030,7 +2030,8 @@ a.callbacks1_s3:focus {
     color: #000;
 }
 /*-- contact --*/
-.agile_map iframe {
+.agile_map .leaflet-container {
+    z-index: 0;
     width: 100%;
     min-height: 580px;
 }
@@ -2084,12 +2085,7 @@ a.callbacks1_s3:focus {
     padding: 0 4em 0 12em;
 }
 .w3_agileits_contact_grid_right form {
-    margin: 0 4em 0 12em;
-}
-.leaflet-container{
-    z-index: 0;
-    width: 50vw;
-    height: 60vh;
+    padding: 0 1em 0 1em;
 }
 /*-- effect --*/
 .input {
@@ -2596,8 +2592,8 @@ h3.agileits-icons-title {
     h2.w3_agile_header {
         font-size: 2em;
     }
-    .w3_agileits_contact_grid_right form{
-        margin: 0 2em 0 6em;
+    .w3_agileits_contact_grid_right {
+        padding: 0 2em 0 6em;
     }
     .agileits_w3layouts_map_pos {
         width: 65%;
@@ -2707,8 +2703,8 @@ h3.agileits-icons-title {
         padding: 0;
         margin-bottom: 24px;
     }
-    .w3_agileits_contact_grid_right form{
-        margin: 0 1em 0 1em;
+    .w3_agileits_contact_grid_right {
+        padding: 0 1em 0 1em;
         margin-top: 2em;
     }
     .agileits_w3layouts_map_pos {
