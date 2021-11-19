@@ -16,6 +16,7 @@ import Household from './pages/Household';
 import PersonalCare from './pages/PersonalCare';
 import PackagedFoods from './pages/PackagedFoods';
 import Beverages from './pages/Beverages';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -35,6 +36,7 @@ function App() {
                 <Route exact path="/personalcare" element={<PersonalCare />} />
                 <Route exact path="/packagedfoods" element={<PackagedFoods />} />
                 <Route exact path="/beverages" element={<Beverages />} />
+                <Route exact path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
         </Router>
