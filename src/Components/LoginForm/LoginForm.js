@@ -28,7 +28,7 @@ const LoginForm = () => {
                         <div className="forgot">
                             <Link to="#">Forgot Password?</Link>
                         </div>
-                        <Form.Control type="submit" value="Login" />
+                        <Form.Control type="button" value="Login" />
                     </Form>
                 </div>
                 <h4>For New People</h4>

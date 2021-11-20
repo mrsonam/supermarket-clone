@@ -51,7 +51,7 @@ const ContactRight = () => {
                     placeholder="Your message here..."
                     required=""
                 ></Form.Control>
-                <Form.Control type="submit" value="Submit" />
+                <Form.Control type="button" value="Submit" />
             </Form>
         </Col>
     );

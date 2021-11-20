@@ -119,7 +119,7 @@ const NewOffers = () => {
                                                                 value=" "
                                                             />
                                                             <Form.Control
-                                                                type="submit"
+                                                                type="button"
                                                                 name="submit"
                                                                 value="Add to cart"
                                                                 className="button"
@@ -236,7 +236,7 @@ const NewOffers = () => {
                                                                 value=" "
                                                             />
                                                             <Form.Control
-                                                                type="submit"
+                                                                type="button"
                                                                 name="submit"
                                                                 value="Add to cart"
                                                                 className="button"
@@ -361,7 +361,7 @@ const NewOffers = () => {
                                                                 value=" "
                                                             />
                                                             <Form.Control
-                                                                type="submit"
+                                                                type="button"
                                                                 name="submit"
                                                                 value="Add to cart"
                                                                 className="button"
@@ -478,7 +478,7 @@ const NewOffers = () => {
                                                                 value=" "
                                                             />
                                                             <Form.Control
-                                                                type="submit"
+                                                                type="button"
                                                                 name="submit"
                                                                 value="Add to cart"
                                                                 className="button"

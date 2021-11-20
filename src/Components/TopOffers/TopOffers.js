@@ -158,7 +158,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -289,7 +289,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -420,7 +420,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -557,7 +557,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -688,7 +688,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -826,7 +826,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -975,7 +975,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -1106,7 +1106,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -1244,7 +1244,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -1381,7 +1381,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -1512,7 +1512,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"
@@ -1643,7 +1643,7 @@ const TopOffers = () => {
                                                                                 value=" "
                                                                             />
                                                                             <Form.Control
-                                                                                type="submit"
+                                                                                type="button"
                                                                                 name="submit"
                                                                                 value="Add to cart"
                                                                                 class="button"

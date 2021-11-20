@@ -59,7 +59,7 @@ const RegistrationForm = () => {
                                     </label>
                                 </div>
                             </div>
-                            <Form.Control type="submit" value="Register" />
+                            <Form.Control type="button" value="Register" />
                         </Form>
                     </div>
                     <div className="register-home">

@@ -34,7 +34,7 @@ const LoginNavbar = () => {
                         <Form.Control type="hidden" name="display" value="1" />
                         <Button
                             className="w3view-cart"
-                            type="submit"
+                            type="button"
                             name="submit"
                             value=""
                         >
