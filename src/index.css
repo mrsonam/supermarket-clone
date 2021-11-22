@@ -2628,9 +2628,9 @@ h3.agileits-icons-title {
     .about-team-grids h4 {
         font-size: 0.9em;
     }
-    .about-team-grids:hover .caption {
+    /* .about-team-grids:hover .caption {
         top: 42.2%;
-    }
+    } */
     .testi h4 {
         font-size: 1.1em;
     }

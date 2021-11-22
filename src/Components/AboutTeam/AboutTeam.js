@@ -30,7 +30,7 @@ const AboutTeam = () => {
                                     will be distracted.
                                 </p>
                             </div>
-                            <div className="social-icons caption">
+                            {/* <div className="social-icons caption">
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/" className="facebook">
@@ -53,7 +53,7 @@ const AboutTeam = () => {
                                     </li>
                                 </ul>
                                 <div className="clearfix"> </div>
-                            </div>
+                            </div> */}
                         </Col>
                         <Col md={3} className="col-md-3 about-team-grids">
                             <Image fluid={true} src={t2} alt="" />
@@ -67,7 +67,7 @@ const AboutTeam = () => {
                                     will be distracted.
                                 </p>
                             </div>
-                            <div className="social-icons caption">
+                            {/* <div className="social-icons caption">
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/" className="facebook">
@@ -90,7 +90,7 @@ const AboutTeam = () => {
                                     </li>
                                 </ul>
                                 <div className="clearfix"> </div>
-                            </div>
+                            </div> */}
                         </Col>
                         <Col md={3} className="about-team-grids">
                             <Image fluid={true} src={t1} alt="" />
@@ -104,7 +104,7 @@ const AboutTeam = () => {
                                     will be distracted.
                                 </p>
                             </div>
-                            <div className="social-icons caption">
+                            {/* <div className="social-icons caption">
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/" className="facebook">
@@ -127,7 +127,7 @@ const AboutTeam = () => {
                                     </li>
                                 </ul>
                                 <div className="clearfix"> </div>
-                            </div>
+                            </div> */}
                         </Col>
                         <Col md={3} className="about-team-grids">
                             <Image fluid={true} src={t3} alt="" />
@@ -141,7 +141,7 @@ const AboutTeam = () => {
                                     will be distracted.
                                 </p>
                             </div>
-                            <div className="social-icons caption">
+                            {/* <div className="social-icons caption">
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/" className="facebook">
@@ -164,7 +164,7 @@ const AboutTeam = () => {
                                     </li>
                                 </ul>
                                 <div className="clearfix"> </div>
-                            </div>
+                            </div> */}
                         </Col>
                     </Row>
                     <div className="clearfix"> </div>
