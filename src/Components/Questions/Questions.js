@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Accordion } from 'react-bootstrap';
+import { Accordion } from 'react-bootstrap';
 
 const Questions = () => {
     return (
-        <div class="faq-w3agile">
-            <div class="container">
-                <h2 class="w3_agile_header">Frequently asked questions(FAQ)</h2>
-                <ul class="faq">
+        <div className="faq-w3agile">
+            <div className="container">
+                <h2 className="w3_agile_header">Frequently asked questions(FAQ)</h2>
+                <ul className="faq">
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>

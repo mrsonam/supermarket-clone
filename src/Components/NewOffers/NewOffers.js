@@ -1,21 +1,83 @@
 import React from 'react';
-import { Container, Form, Image, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import offer from '../../images/offer.png';
-import img14 from '../../images/14.png';
-import img15 from '../../images/15.png';
-import img16 from '../../images/16.png';
-import img17 from '../../images/17.png';
+import { Container, Form, Image, Row, Col, Spinner } from 'react-bootstrap';
 
-
-const NewOffers = () => {
+const NewOffers = ({ newProducts }) => {
     return (
         <div className="newproducts-w3agile">
             <Container>
                 <h3>New offers</h3>
                 <div className="agile_top_brands_grids">
                     <Row>
+                        {newProducts !== undefined ? (
+                            newProducts.sectionDetails.products.map(
+                                (product) => {
+                                    return (
+                                        <Col
+                                            md={3}
+                                            className="top_brand_left-1 mb-5"
+                                        >
+                                            <div className="hover14 column">
+                                                <div className="agile_top_brand_left_grid">
+                                                    <div className="agile_top_brand_left_grid1">
+                                                        <figure>
+                                                            <div className="snipcart-item block">
+                                                                <div className="snipcart-thumb">
+                                                                    <a href="products.html">
+                                                                        <Image
+                                                                            fluid={
+                                                                                true
+                                                                            }
+                                                                            title=" "
+                                                                            alt=" "
+                                                                            src={
+                                                                                product
+                                                                                    .images[0]
+                                                                                    .imageName
+                                                                            }
+                                                                        />
+                                                                    </a>
+                                                                    <p>
+                                                                        {
+                                                                            product.title
+                                                                        }
+                                                                    </p>
+                                                                    <h4>
+                                                                        NRs.{' '}
+                                                                        {
+                                                                            product
+                                                                                .unitPrice[0]
+                                                                                .sellingPrice
+                                                                        }
+                                                                        {/* <span>$55.00</span> */}
+                                                                    </h4>
+                                                                </div>
+                                                                <div className="snipcart-details top_brand_home_details">
+                                                                    <Form>
+                                                                        <Form.Control
+                                                                            type="button"
+                                                                            name="submit"
+                                                                            value="Add to cart"
+                                                                            className="button"
+                                                                        />
+                                                                    </Form>
+                                                                </div>
+                                                            </div>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    );
+                                },
+                            )
+                        ) : (
+                            <Spinner animation="border" role="status">
+                                <span className="visually-hidden">
+                                    Loading...
+                                </span>
+                            </Spinner>
+                        )}
+                        {/* 
                         <Col md={3} className="top_brand_left-1">
                             <div className="hover14 column">
                                 <div className="agile_top_brand_left_grid">
@@ -491,7 +553,7 @@ const NewOffers = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                     <div className="clearfix"> </div>
                 </div>

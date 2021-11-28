@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Image, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faFacebookF,
-    faGooglePlus,
-    faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {
+//     faFacebookF,
+//     faGooglePlus,
+//     faTwitter,
+// } from '@fortawesome/free-brands-svg-icons';
 import t1 from '../../images/t1.jpg';
 import t2 from '../../images/t2.jpg';
 import t3 from '../../images/t3.jpg';

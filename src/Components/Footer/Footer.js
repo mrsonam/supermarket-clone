@@ -14,13 +14,13 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
-            <div class="footer">
+            <div className="footer">
                 <Container>
-                    <div class="w3_footer_grids d-flex">
-                        <div class="col-md-3 w3_footer_grid">
+                    <div className="w3_footer_grids d-flex">
+                        <div className="col-md-3 w3_footer_grid">
                             <h3>Contact</h3>
 
-                            <ul class="address">
+                            <ul className="address">
                                 <li>
                                     <i>
                                         <FontAwesomeIcon
@@ -46,9 +46,9 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3 w3_footer_grid">
+                        <div className="col-md-3 w3_footer_grid">
                             <h3>Information</h3>
-                            <ul class="info">
+                            <ul className="info">
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
@@ -81,9 +81,9 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3 w3_footer_grid">
+                        <div className="col-md-3 w3_footer_grid">
                             <h3>Category</h3>
-                            <ul class="info">
+                            <ul className="info">
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
@@ -120,9 +120,9 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3 w3_footer_grid">
+                        <div className="col-md-3 w3_footer_grid">
                             <h3>Profile</h3>
-                            <ul class="info">
+                            <ul className="info">
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
@@ -149,12 +149,12 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div class="clearfix"> </div>
+                        <div className="clearfix"> </div>
                     </div>
                 </Container>
 
-                <div class="footer-copy">
-                    <div class="container">
+                <div className="footer-copy">
+                    <div className="container">
                         <p>
                             © 2017 Super Market. All rights reserved | Design by{' '}
                             <a href="http://w3layouts.com/">W3layouts</a>
@@ -162,40 +162,40 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div class="footer-botm">
-                <div class="container">
-                    <div class="w3layouts-foot">
+            <div className="footer-botm">
+                <div className="container">
+                    <div className="w3layouts-foot">
                         <ul>
                             <li>
-                                <a href="https://www.facebook.com/" target="__blank" class="w3_agile_facebook">
+                                <a href="https://www.facebook.com/" target="__blank" className="w3_agile_facebook">
                                     <FontAwesomeIcon icon={faFacebookF}/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.twitter.com/" target="__blank" class="agile_twitter">
+                                <a href="https://www.twitter.com/" target="__blank" className="agile_twitter">
                                 <FontAwesomeIcon icon={faTwitter}/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.dribbble.com/" target="__blank" class="w3_agile_dribble">
+                                <a href="https://www.dribbble.com/" target="__blank" className="w3_agile_dribble">
                                 <FontAwesomeIcon icon={faDribbble}/>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.vimeo.com/" target="__blank" class="w3_agile_vimeo">
+                                <a href="https://www.vimeo.com/" target="__blank" className="w3_agile_vimeo">
                                 <FontAwesomeIcon icon={faVimeoV}/>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="payment-w3ls">
+                    <div className="payment-w3ls">
                         <Image fluid={true}
                             src={card}
                             alt=" "
-                            class="img-responsive"
+                            className="img-responsive"
                         />
                     </div>
-                    <div class="clearfix"> </div>
+                    <div className="clearfix"> </div>
                 </div>
             </div>
         </div>

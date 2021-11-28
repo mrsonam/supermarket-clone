@@ -1827,6 +1827,7 @@ h2.w3_agile_header:after {
 }
 .main-carousel img{
     width: 100%;
+    z-index: 100;
 }
 .main-carousel .slide-desc h3{
     font-size: 50px;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 const Map = () => {

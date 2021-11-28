@@ -6,7 +6,7 @@ import { Col } from 'react-bootstrap';
 const ContactLeft = () => {
     return (
         <Col md={6} className="w3_agileits_contact_grid_left">
-            <div class="agile_map">
+            <div className="agile_map">
                 <Map />
             </div>
             <ContactInfo />

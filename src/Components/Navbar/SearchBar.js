@@ -6,22 +6,22 @@ import { Link } from 'react-router-dom';
 
 const SearchBar = () => {
     return (
-        <div class="logo_products">
+        <div className="logo_products">
             <Container>
-                <div class="w3ls_logo_products_left1">
-                    <ul class="phone_email">
+                <div className="w3ls_logo_products_left1">
+                    <ul className="phone_email">
                         <li>
                             <FontAwesomeIcon icon={faPhoneAlt} className="phoneIcon"/>Order
                             online or call us : (+0123) 234 567
                         </li>
                     </ul>
                 </div>
-                <div class="w3ls_logo_products_left">
+                <div className="w3ls_logo_products_left">
                     <h1>
                         <Link to="/">super Market</Link>
                     </h1>
                 </div>
-                <div class="w3l_search">
+                <div className="w3l_search">
                     <Form>
                         <input
                             type="search"
@@ -31,16 +31,16 @@ const SearchBar = () => {
                         />
                         <button
                             type="submit"
-                            class="btn btn-default search"
+                            className="btn btn-default search"
                             aria-label="Left Align"
                         >
                             <FontAwesomeIcon icon={faSearch} className="searchIcon"/>
                         </button>
-                        <div class="clearfix"></div>
+                        <div className="clearfix"></div>
                     </Form>
                 </div>
 
-                <div class="clearfix"> </div>
+                <div className="clearfix"> </div>
             </Container>
         </div>
     );

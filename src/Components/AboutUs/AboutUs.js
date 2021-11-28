@@ -96,7 +96,7 @@ const AboutUs = () => {
                                                 </p>
                                                 <div className="testi-subscript">
                                                     <p>
-                                                        <a href="#">
+                                                        <a href="/">
                                                             John Doe,
                                                         </a>
                                                         Adipiscing
@@ -118,7 +118,7 @@ const AboutUs = () => {
                                                 </p>
                                                 <div className="testi-subscript">
                                                     <p>
-                                                        <a href="#">
+                                                        <a href="/">
                                                             elit semper,
                                                         </a>
                                                         Dolor Elit
@@ -140,7 +140,7 @@ const AboutUs = () => {
                                                 </p>
                                                 <div className="testi-subscript">
                                                     <p>
-                                                        <a href="#">
+                                                        <a href="/">
                                                             Amet Doe,
                                                         </a>
                                                         Suspendisse

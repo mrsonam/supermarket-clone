@@ -1,41 +1,50 @@
 import React from 'react';
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel, Image, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import b1 from "../../images/b1.jpg"
-import b3 from "../../images/b3.jpg"
 
-
-const HomeCarousel = () => {
+const HomeCarousel = ({ banner }) => {
     return (
         <div>
-            <Carousel fade controls={false} indicators={false}>
-                <Carousel.Item>
-                    <Link to="/beverages">
+            <Carousel fade>
+                {banner !== undefined ? (
+                    banner.details.map((elem) => (
+                        <Carousel.Item>
+                            <Link to={elem.link_to}>
+                                <Image
+                                    fluid={true}
+                                    className="d-block w-100"
+                                    src={elem.images}
+                                    alt="First slide"
+                                />
+                            </Link>
+                        </Carousel.Item>
+                    ))
+                ) : (
+                    <Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                )}
+                {/* <Carousel.Item>
                         <Image fluid={true}
                             className="d-block w-100"
                             src={b1}
                             alt="First slide"
                         />
-                    </Link>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Link to="/personalcare">
                         <Image fluid={true}
                             className="d-block w-100"
                             src={b3}
                             alt="Second slide"
                         />
-                    </Link>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <Link to="household">
                         <Image fluid={true}
                             className="d-block w-100"
                             src={b1}
                             alt="Third slide"
                         />
-                    </Link>
-                </Carousel.Item>
+                </Carousel.Item> */}
             </Carousel>
         </div>
     );

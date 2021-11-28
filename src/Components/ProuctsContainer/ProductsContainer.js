@@ -3,13 +3,13 @@ import { Container, Row } from 'react-bootstrap';
 import Categories from '../Categories/Categories';
 import ProductsRight from '../ProductsRight/ProductsRight';
 
-const ProductsContainer = () => {
+const ProductsContainer = ({products}) => {
     return (
         <div className="products">
             <Container>
                 <Row>
-                    <Categories />
-                    <ProductsRight/>
+                    {/* <Categories /> */}
+                    <ProductsRight products={products}/>
                 </Row>
                 <div className="clearfix"> </div>
             </Container>

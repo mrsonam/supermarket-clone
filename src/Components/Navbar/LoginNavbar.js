@@ -1,6 +1,6 @@
 import React from 'react';
 // import './LoginNavbar.css';
-import { Container, Form, Button, Nav } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, Link } from 'react-router-dom';
