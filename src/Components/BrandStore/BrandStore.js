@@ -11,19 +11,31 @@ const BrandStore = ({ categories }) => {
                     <Row>
                         {categories !== undefined ? (
                             categories.categories.map((category) => (
-                                <Col md={3} className="w3layouts-brand mb-5" key={category.id}>
-                                    <Card style={{ width: '18rem' }}>
-                                        <Card.Img
-                                            variant="top"
-                                            src={category.icon}
-                                        />
-                                        <Card.Body>
-                                            <Card.Title>{category.title}</Card.Title>
-                                            <Card.Text className="text-muted">
-                                                Products: {category.productCount}
-                                            </Card.Text>
-                                        </Card.Body>
-                                    </Card>
+                                <Col
+                                    md={3}
+                                    className="w3layouts-brand mb-5"
+                                    key={category.id}
+                                >
+                                    <Link
+                                        to={'/' + category.title.toLowerCase()}
+                                        className="nav-link"
+                                    >
+                                        <Card style={{ width: '18rem' }}>
+                                            <Card.Img
+                                                variant="top"
+                                                src={category.icon}
+                                            />
+                                            <Card.Body>
+                                                <Card.Title>
+                                                    {category.title}
+                                                </Card.Title>
+                                                <Card.Text className="text-muted">
+                                                    Products:{' '}
+                                                    {category.productCount}
+                                                </Card.Text>
+                                            </Card.Body>
+                                        </Card>
+                                    </Link>
                                 </Col>
                             ))
                         ) : (

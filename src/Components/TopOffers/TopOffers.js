@@ -21,16 +21,6 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                 title={newDishes.sectionDetails.title}
                             >
                                 <Container>
-                                    <div className="agile-tp">
-                                        <h5 className="text-center">
-                                            {newDishes.sectionDetails.title}
-                                        </h5>
-                                        {/* <p className="w3l-ad">
-                                            We've pulled together all our
-                                            advertised offers into one place, so
-                                            you won't miss out on a great deal.
-                                        </p> */}
-                                    </div>
                                     <div className="agile_top_brands_grids">
                                         <Row>
                                             {newDishes.sectionDetails.products.map(
@@ -58,16 +48,6 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                 title={hotOffers.sectionDetails.title}
                             >
                                 <Container>
-                                    <div className="agile-tp">
-                                        <h5 className="text-center">
-                                            {hotOffers.sectionDetails.title}
-                                        </h5>
-                                        {/* <p className="w3l-ad">
-                                        We've pulled together all our advertised
-                                        offers into one place, so you won't miss
-                                        out on a great deal.
-                                    </p> */}
-                                    </div>
                                     <div className="agile_top_brands_grids">
                                         <Row>
                                             {hotOffers.sectionDetails.products.map(

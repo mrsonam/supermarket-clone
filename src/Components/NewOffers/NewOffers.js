@@ -1,5 +1,14 @@
 import React from 'react';
-import { Container, Form, Image, Row, Col, Spinner } from 'react-bootstrap';
+import {
+    Container,
+    Form,
+    Image,
+    Row,
+    Col,
+    Spinner,
+    Card,
+    Button,
+} from 'react-bootstrap';
 
 const NewOffers = ({ newProducts }) => {
     return (
@@ -14,60 +23,92 @@ const NewOffers = ({ newProducts }) => {
                                     return (
                                         <Col
                                             md={3}
-                                            className="top_brand_left-1 mb-5"
-                                            key={product.id}
+                                            className="top_brand_left mb-5"
                                         >
-                                            <div className="hover14 column">
-                                                <div className="agile_top_brand_left_grid">
-                                                    <div className="agile_top_brand_left_grid1">
-                                                        <figure>
-                                                            <div className="snipcart-item block">
-                                                                <div className="snipcart-thumb">
-                                                                    <a href="products.html">
-                                                                        <Image
-                                                                            fluid={
-                                                                                true
-                                                                            }
-                                                                            title=" "
-                                                                            alt=" "
-                                                                            src={
-                                                                                product
-                                                                                    .images[0]
-                                                                                    .imageName
-                                                                            }
-                                                                        />
-                                                                    </a>
-                                                                    <p>
-                                                                        {
-                                                                            product.title
-                                                                        }
-                                                                    </p>
-                                                                    <h4>
-                                                                        NRs.{' '}
-                                                                        {
-                                                                            product
-                                                                                .unitPrice[0]
-                                                                                .sellingPrice
-                                                                        }
-                                                                        {/* <span>$55.00</span> */}
-                                                                    </h4>
-                                                                </div>
-                                                                <div className="snipcart-details top_brand_home_details">
-                                                                    <Form>
-                                                                        <Form.Control
-                                                                            type="button"
-                                                                            name="submit"
-                                                                            value="Add to cart"
-                                                                            className="button"
-                                                                        />
-                                                                    </Form>
-                                                                </div>
-                                                            </div>
-                                                        </figure>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <Card style={{ width: '18rem' }}>
+                                                <Card.Img
+                                                    variant="top"
+                                                    src={
+                                                        product.images[0]
+                                                            .imageName
+                                                    }
+                                                />
+                                                <Card.Body className="text-center">
+                                                    <Card.Title>
+                                                        {product.title}
+                                                    </Card.Title>
+                                                    <Card.Text>
+                                                        <h5>
+                                                            NRs.{' '}
+                                                            {
+                                                                product
+                                                                    .unitPrice[0]
+                                                                    .sellingPrice
+                                                            }
+                                                        </h5>
+                                                    </Card.Text>
+                                                    <Button variant="outline-success">
+                                                        Add To Cart
+                                                    </Button>
+                                                </Card.Body>
+                                            </Card>
                                         </Col>
+                                        // <Col
+                                        //     md={3}
+                                        //     className="top_brand_left-1 mb-5"
+                                        //     key={product.id}
+                                        // >
+                                        //     <div className="hover14 column">
+                                        //         <div className="agile_top_brand_left_grid">
+                                        //             <div className="agile_top_brand_left_grid1">
+                                        //                 <figure>
+                                        //                     <div className="snipcart-item block">
+                                        //                         <div className="snipcart-thumb">
+                                        //                             <a href="products.html">
+                                        //                                 <Image
+                                        //                                     fluid={
+                                        //                                         true
+                                        //                                     }
+                                        //                                     title=" "
+                                        //                                     alt=" "
+                                        //                                     src={
+                                        //                                         product
+                                        //                                             .images[0]
+                                        //                                             .imageName
+                                        //                                     }
+                                        //                                 />
+                                        //                             </a>
+                                        //                             <p>
+                                        //                                 {
+                                        //                                     product.title
+                                        //                                 }
+                                        //                             </p>
+                                        //                             <h4>
+                                        //                                 NRs.{' '}
+                                        //                                 {
+                                        //                                     product
+                                        //                                         .unitPrice[0]
+                                        //                                         .sellingPrice
+                                        //                                 }
+                                        //                                 {/* <span>$55.00</span> */}
+                                        //                             </h4>
+                                        //                         </div>
+                                        //                         <div className="snipcart-details top_brand_home_details">
+                                        //                             <Form>
+                                        //                                 <Form.Control
+                                        //                                     type="button"
+                                        //                                     name="submit"
+                                        //                                     value="Add to cart"
+                                        //                                     className="button"
+                                        //                                 />
+                                        //                             </Form>
+                                        //                         </div>
+                                        //                     </div>
+                                        //                 </figure>
+                                        //             </div>
+                                        //         </div>
+                                        //     </div>
+                                        // </Col>
                                     );
                                 },
                             )
