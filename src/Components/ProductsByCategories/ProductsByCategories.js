@@ -1,29 +1,33 @@
-import React from 'react';
-import {
-    Row,
-    Col,
-    Form,
-    Image,
-    Pagination,
-    Spinner,
-    Card,
-    Button,
-} from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Row, Col, Form, Image, Spinner, Card, Button } from 'react-bootstrap';
 
-const ProductsRight = ({ products }) => {
-    let active = 1;
-    let items = [];
-    // products !== undefined ? items = products : items= [];
+const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
+const apiKey =
+    'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545';
+const warehouseId = 1;
 
-    for (let number = 1; number <= 5; number++) {
-        items.push(
-            <Pagination.Item key={number} active={number === active}>
-                {number}
-            </Pagination.Item>,
+const ProductsByCategories = ({ categoryId }) => {
+    const [products, setProducts] = useState([]);
+    async function getProducts() {
+        let res = await fetch(
+            `${baseURL}/api/v4/product?categoryId=${categoryId}`,
+            {
+                method: 'GET',
+                headers: {
+                    'Warehouse-Id': warehouseId,
+                    'Api-key': apiKey,
+                },
+            },
         );
+        let data = await res.json();
+        console.log(data.data);
+        return data.data;
     }
+    useEffect(() => {
+        getProducts().then((data) => setProducts(data));
+    });
     return (
-        <Col md={12} className="products-right">
+        <Col md={9} className="products-right">
             <div className="products-right-grid">
                 <div className="products-right-grids">
                     <div className="sorting">
@@ -50,7 +54,7 @@ const ProductsRight = ({ products }) => {
                     {products !== undefined ? (
                         products.map((product) => {
                             return (
-                                <Col md={3} className="top_brand_left mb-5">
+                                <Col md={4} className="top_brand_left mb-5">
                                     <Card style={{ width: '18rem' }}>
                                         <Card.Img
                                             variant="top"
@@ -75,10 +79,7 @@ const ProductsRight = ({ products }) => {
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                // <Col
-                                //     md={3}
-                                //     className="top_brand_left mb-5"
-                                // >
+                                // <Col md={3} className="top_brand_left mb-5">
                                 //     <div className="hover14 column">
                                 //         <div className="agile_top_brand_left_grid">
                                 //             <div className="agile_top_brand_left_grid1">
@@ -87,9 +88,7 @@ const ProductsRight = ({ products }) => {
                                 //                         <div className="snipcart-thumb">
                                 //                             <a href="products.html">
                                 //                                 <Image
-                                //                                     fluid={
-                                //                                         true
-                                //                                     }
+                                //                                     fluid={true}
                                 //                                     title=" "
                                 //                                     alt=" "
                                 //                                     src={
@@ -100,9 +99,7 @@ const ProductsRight = ({ products }) => {
                                 //                                 />
                                 //                             </a>
                                 //                             <p>
-                                //                                 {
-                                //                                     product.title
-                                //                                 }
+                                //                                 {product.title}
                                 //                             </p>
                                 //                             <h4>
                                 //                                 NRs.{' '}
@@ -140,15 +137,8 @@ const ProductsRight = ({ products }) => {
                 </Row>
                 <div className="clearfix"> </div>
             </div>
-            <div className="numbering">
-                <Pagination className="paging">
-                    <Pagination.Prev />
-                    {items}
-                    <Pagination.Next />
-                </Pagination>
-            </div>
         </Col>
     );
 };
 
-export default ProductsRight;
+export default ProductsByCategories;

@@ -8,7 +8,7 @@ const HomeCarousel = ({ banner }) => {
             <Carousel fade>
                 {banner !== undefined ? (
                     banner.details.map((elem) => (
-                        <Carousel.Item>
+                        <Carousel.Item key={elem.id}>
                             <Link to={elem.link_to}>
                                 <Image
                                     fluid={true}
@@ -24,27 +24,6 @@ const HomeCarousel = ({ banner }) => {
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
                 )}
-                {/* <Carousel.Item>
-                        <Image fluid={true}
-                            className="d-block w-100"
-                            src={b1}
-                            alt="First slide"
-                        />
-                </Carousel.Item>
-                <Carousel.Item>
-                        <Image fluid={true}
-                            className="d-block w-100"
-                            src={b3}
-                            alt="Second slide"
-                        />
-                </Carousel.Item>
-                <Carousel.Item>
-                        <Image fluid={true}
-                            className="d-block w-100"
-                            src={b1}
-                            alt="Third slide"
-                        />
-                </Carousel.Item> */}
             </Carousel>
         </div>
     );

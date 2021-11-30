@@ -35,8 +35,8 @@ const Home = () => {
                 <title>Home</title>
             </Helmet>
             <MainCarousel banner={home[0]}/>
-            <TopOffers newDishes={home[2]} hotOffers={home[7]}/>
-            <HomeCarousel banner={home[6]}/>
+            <TopOffers newDishes={home[2]} hotOffers={home[6]}/>
+            <HomeCarousel banner={home[5]}/>
             <BannerBottom/>
             <BrandStore categories={home[1]}/>
             <NewOffers newProducts={home[4]}/>

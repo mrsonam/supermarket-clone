@@ -10,15 +10,16 @@ import Login from './pages/Login';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Products from './pages/Products';
-import Gourmet from './pages/Gourmet';
-import Groceries from './pages/Groceries';
-import Household from './pages/Household';
-import PersonalCare from './pages/PersonalCare';
-import PackagedFoods from './pages/PackagedFoods';
-import Beverages from './pages/Beverages';
+import Pizza from './pages/Pizza';
 import Contact from './pages/Contact';
 import ScrollToTop from 'react-scroll-up';
 import arrow from "./images/arrow.png"
+import Momo from './pages/Momo';
+import Noodles from './pages/Noodles';
+import Chilli from './pages/Chilli';
+import Sandwich from './pages/Sandwich';
+import HealthyChoice from './pages/HealthyChoice';
+import Rice from './pages/Rice';
 
 function App() {
     return (
@@ -35,16 +36,17 @@ function App() {
                 <Route exact path="/login" element={<Login />} />
                 <Route exact path="/faq" element={<FAQ />} />
                 <Route exact path="/products" element={<Products />} />
-                <Route exact path="/gourmet" element={<Gourmet />} />
-                <Route exact path="/groceries" element={<Groceries />} />
-                <Route exact path="/household" element={<Household />} />
-                <Route exact path="/personalcare" element={<PersonalCare />} />
+                <Route exact path="/pizza" element={<Pizza />} />
+                <Route exact path="/momo" element={<Momo />} />
+                <Route exact path="/noodles" element={<Noodles />} />
+                <Route exact path="/chilli" element={<Chilli />} />
                 <Route
                     exact
-                    path="/packagedfoods"
-                    element={<PackagedFoods />}
+                    path="/sandwich"
+                    element={<Sandwich />}
                 />
-                <Route exact path="/beverages" element={<Beverages />} />
+                <Route exact path="/healthy%20choice" element={<HealthyChoice />} />
+                <Route exact path="/rice" element={<Rice />} />
                 <Route exact path="/contact" element={<Contact />} />
             </Routes>
             <Footer />

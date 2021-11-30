@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhoneAlt, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import Button from '@restart/ui/esm/Button';
+
+const baseURL = "https://uat.ordering-boafresh.ekbana.net";
+const apiKey = "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545";
+const warehouseId = 1;
 
 const SearchBar = () => {
+    const [search, setSearch] = useState('')
+    // const [products, setProducts] = useState([]);
+    async function getProducts() {
+        let res = await fetch(`${baseURL}/api/v4/product?query=${search}`, {
+            method: 'GET',
+            headers: {
+                "Warehouse-Id": warehouseId,
+                "Api-key": apiKey
+            },
+        });
+        let data = await res.json();
+        return data.data;
+    }
+    const showProducts = () => {
+        getProducts().then(data => console.log(data))
+        // console.log(products)
+    }
     return (
         <div className="logo_products">
             <Container>
@@ -18,24 +40,25 @@ const SearchBar = () => {
                 </div>
                 <div className="w3ls_logo_products_left">
                     <h1>
-                        <Link to="/">super Market</Link>
+                        <Link to="/">Boa Fresh</Link>
                     </h1>
                 </div>
                 <div className="w3l_search">
-                    <Form>
-                        <input
-                            type="search"
+                    <Form className="d-flex" onSubmit={showProducts}>
+                        <Form.Control
+                            type="text"
                             name="Search"
                             placeholder="Search for a Product..."
-                            required=""
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
                         />
-                        <button
-                            type="submit"
+                        <Button
+                            type="button"
                             className="btn btn-default search"
-                            aria-label="Left Align"
+                            onClick={showProducts}
                         >
                             <FontAwesomeIcon icon={faSearch} className="searchIcon"/>
-                        </button>
+                        </Button>
                         <div className="clearfix"></div>
                     </Form>
                 </div>

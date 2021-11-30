@@ -11,7 +11,7 @@ const BrandStore = ({ categories }) => {
                     <Row>
                         {categories !== undefined ? (
                             categories.categories.map((category) => (
-                                <Col md={3} className="w3layouts-brand mb-5">
+                                <Col md={3} className="w3layouts-brand mb-5" key={category.id}>
                                     <Card style={{ width: '18rem' }}>
                                         <Card.Img
                                             variant="top"

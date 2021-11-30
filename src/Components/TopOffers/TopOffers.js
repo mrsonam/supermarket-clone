@@ -38,6 +38,7 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                                     return (
                                                         <Dishes
                                                             dishes={dishes}
+                                                            key={dishes.id}
                                                         />
                                                     );
                                                 },
@@ -51,7 +52,7 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                         ) : (
                             <div>Loading...</div>
                         )}
-                        {newDishes !== undefined ? (
+                        {hotOffers !== undefined ? (
                             <Tab
                                 eventKey={hotOffers.sectionDetails.title}
                                 title={hotOffers.sectionDetails.title}
@@ -74,6 +75,7 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                                     return (
                                                         <Dishes
                                                             dishes={dishes}
+                                                            key={dishes.id}
                                                         />
                                                     );
                                                 },

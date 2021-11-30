@@ -1,15 +1,15 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import GourmetRight from '../GourmetRight/GourmetRight'
 import Categories from '../Categories/Categories'
+import ProductsByCategories from '../ProductsByCategories/ProductsByCategories'
 
-const GourmetContainer = () => {
+const HealthyChoiceContainer = () => {
     return (
         <div className="products">
             <Container>
                 <Row>
                     <Categories />
-                    <GourmetRight/>
+                    <ProductsByCategories categoryId="7"/>
                 </Row>
                 <div className="clearfix"> </div>
             </Container>
@@ -17,4 +17,4 @@ const GourmetContainer = () => {
     )
 }
 
-export default GourmetContainer
+export default HealthyChoiceContainer;

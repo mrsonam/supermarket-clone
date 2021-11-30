@@ -15,6 +15,7 @@ const NewOffers = ({ newProducts }) => {
                                         <Col
                                             md={3}
                                             className="top_brand_left-1 mb-5"
+                                            key={product.id}
                                         >
                                             <div className="hover14 column">
                                                 <div className="agile_top_brand_left_grid">
