@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Spinner, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CartContainer from './CartContainer';
@@ -57,19 +57,6 @@ const Cart = () => {
     } catch (err) {
         console.log(err);
     }
-
-    const clearCart = async () => {
-        let res = await fetch(`${baseURL}/api/v4/cart}`, {
-            method: 'DELETE',
-            headers: {
-                'Warehouse-Id': warehouseId,
-                Authorization: 'Bearer ' + accessToken,
-                'Api-key': apiKey
-            },
-        });
-        console.log(res)
-        if(res.ok) window.location.href ="/"
-    };
 
     return (
         <div className="checkout">
@@ -135,13 +122,20 @@ const Cart = () => {
                         <div className="checkout-right-basket">
                             <Form.Select aria-label="Default select example">
                                 <option>Payment Method</option>
-                                {paymentMethod.map(method => {
-                                    return(<option value={method.title} key={method.id}>{method.title}</option>)
+                                {paymentMethod.map((method) => {
+                                    return (
+                                        <option
+                                            value={method.title}
+                                            key={method.id}
+                                        >
+                                            {method.title}
+                                        </option>
+                                    );
                                 })}
                             </Form.Select>
-                            <Button className="mt-5">
-                                Checkout
-                            </Button>
+                            <Link to="/">
+                                <Button className="mt-5">Checkout</Button>
+                            </Link>
                         </div>
                         <div className="clearfix"> </div>
                     </div>
