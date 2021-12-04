@@ -4,15 +4,21 @@ import LoginForm from '../Components/LoginForm/LoginForm'
 import { Helmet } from 'react-helmet'
 
 const Login = () => {
-    return (
-        <div>
-            <Helmet>
-                <title>Login Page</title>
-            </Helmet>
-            <BreadCrumbs page="Login Page"/>
-            <LoginForm/>
-        </div>
-    )
+    const accessToken = localStorage.getItem('accessToken');
+    if(accessToken){
+        window.location.href= "/profile"
+    }else{
+        return (
+            <div>
+                <Helmet>
+                    <title>Login Page</title>
+                </Helmet>
+                <BreadCrumbs page="Login Page"/>
+                <LoginForm/>
+            </div>
+        )
+    }
+    
 }
 
 export default Login

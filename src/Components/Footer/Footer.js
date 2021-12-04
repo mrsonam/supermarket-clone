@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="footer">
                 <Container>
                     <div className="w3_footer_grids d-flex">
-                        <div className="col-md-3 w3_footer_grid">
+                        <div className="col-md-4 w3_footer_grid">
                             <h3>Contact</h3>
 
                             <ul className="address">
@@ -46,7 +46,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-3 w3_footer_grid">
+                        <div className="col-md-4 w3_footer_grid">
                             <h3>Information</h3>
                             <ul className="info">
                                 <li>
@@ -65,62 +65,17 @@ const Footer = () => {
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="/short-codes">Short Codes</Link>
-                                </li>
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
                                     <Link to="/faq">FAQ's</Link>
                                 </li>
                                 <li>
                                     <i>
                                         <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
                                     </i>
-                                    <Link to="/products">Special Products</Link>
+                                    <Link to="/products">Products</Link>
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-md-3 w3_footer_grid">
-                            <h3>Category</h3>
-                            <ul className="info">
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
-                                    <Link to="/groceries">Groceries</Link>
-                                </li>
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
-                                    <Link to="/household">Household</Link>
-                                </li>
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
-                                    <Link to="/personalcare">
-                                        Personal Care
-                                    </Link>
-                                </li>
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
-                                    <Link to="/packagedfoods">
-                                        Packaged Foods
-                                    </Link>
-                                </li>
-                                <li>
-                                    <i>
-                                        <FontAwesomeIcon icon={faArrowRight} className="faArrowRight"/>
-                                    </i>
-                                    <Link to="/beverages">Beverages</Link>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-md-3 w3_footer_grid">
+                        <div className="col-md-4 w3_footer_grid">
                             <h3>Profile</h3>
                             <ul className="info">
                                 <li>

@@ -1,4 +1,5 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
+import { useParams } from 'react-router'
 import BreadCrumbs from '../Components/BreadCrumbs/BreadCrumbs'
 import { Helmet } from 'react-helmet'
 import ProductsContainer from '../Components/ProuctsContainer/ProductsContainer'
@@ -7,10 +8,12 @@ const baseURL = "https://uat.ordering-boafresh.ekbana.net";
 const apiKey = "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545";
 const warehouseId = 1;
 
-const Products = () => {
+const SearchProduct = () => {
+    const { key } = useParams();
+    const query = key.toString();
     const [products, setProducts] = useState([]);
-    const getProducts = async () => {
-        let res = await fetch(`${baseURL}/api/v4/product`, {
+    async function getProducts() {
+        let res = await fetch(`${baseURL}/api/v4/product?query=${query}`, {
             method: 'GET',
             headers: {
                 "Warehouse-Id": warehouseId,
@@ -18,7 +21,8 @@ const Products = () => {
             },
         });
         let data = await res.json();
-        if (res.ok) setProducts(data.data)
+        console.log(res)
+        if(res.ok) setProducts(data.data)
     }
     try {
         getProducts();
@@ -28,12 +32,12 @@ const Products = () => {
     return (
         <div>
             <Helmet>
-                <title>Products</title>
+                <title>Search Results</title>
             </Helmet>
-            <BreadCrumbs page="Products"/>
+            <BreadCrumbs page={"Results for " + key}/>
             <ProductsContainer products={products}/>
         </div>
     )
 }
 
-export default Products
+export default SearchProduct

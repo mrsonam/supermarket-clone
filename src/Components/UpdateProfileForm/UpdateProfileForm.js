@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form } from 'react-bootstrap';
+import { Container, Form , ToastContainer, Toast} from 'react-bootstrap';
 
 const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
 const apiKey =
@@ -9,24 +9,60 @@ const UpdateProfileForm = () => {
     const accessToken = localStorage.getItem('accessToken');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+    const [variant, setVariant] = useState('danger');
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleShowToast = () => setShowToast(!showToast);
+
+    const updateValidation = () => {
+        if (firstName === '') {
+            setMessage('First Name cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else if (lastName === '') {
+            setMessage('Last Name cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else {
+            return true;
+        }
+    };
 
     async function update() {
-        let res = await fetch(`${baseURL}/api/v4/profile`, {
-            method: 'PATCH',
-            headers: {
-                Authorization: 'Bearer ' + accessToken,
-                'Api-key': apiKey,
-            },
-            body: JSON.stringify({
-                'first-name': firstName,
-                'last-name': lastName,
-                mobile_number: phone,
-            }),
-        });
-        let data = await res.json();
-        console.log(data);
-        return data.data;
+        if (updateValidation()) {
+            let res = await fetch(`${baseURL}/api/v4/profile`, {
+                method: 'PATCH',
+                headers: {
+                    Authorization: 'Bearer ' + accessToken,
+                    'Api-key': apiKey,
+                },
+                body: JSON.stringify({
+                    'first-name': firstName,
+                    'last-name': lastName,
+                }),
+            });
+            let data = await res.json();
+            if (res.ok) {
+                setMessage('Profile Updated');
+                setVariant('success');
+                if (!showToast) {
+                    toggleShowToast();
+                }
+            } else {
+                setMessage(data.errors[0].message);
+                setVariant('danger');
+                if (!showToast) {
+                    toggleShowToast();
+                }
+            }
+        }
     }
     return (
         <div className="login">
@@ -34,8 +70,7 @@ const UpdateProfileForm = () => {
                 <h2>Update Info</h2>
 
                 <div
-                    className="login-form-grids animated wow slideInUp"
-                    data-wow-delay=".5s"
+                    className="login-form-grids"
                 >
                     <Form>
                         <Form.Control
@@ -51,13 +86,7 @@ const UpdateProfileForm = () => {
                             onChange={(e) => setLastName(e.target.value)}
                         />
                         <Form.Control
-                            type="text"
-                            placeholder="Phone Number"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                        />
-                        <Form.Control
-                        className="mt-3"
+                            className="mt-3"
                             type="button"
                             value="Update"
                             onClick={update}
@@ -65,6 +94,14 @@ const UpdateProfileForm = () => {
                     </Form>
                 </div>
             </Container>
+            <ToastContainer position="bottom-end" className="p-3">
+                <Toast show={showToast} onClose={toggleShowToast} bg={variant}>
+                    <Toast.Header>
+                        <strong className="me-auto">Boa-Fresh</strong>
+                    </Toast.Header>
+                    <Toast.Body>{message}</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </div>
     );
 };

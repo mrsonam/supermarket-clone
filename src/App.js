@@ -22,6 +22,7 @@ import Rice from './pages/Rice';
 import Profile from './pages/Profile';
 import MyCart from './pages/MyCart';
 import ForgotPassword from './pages/ForgotPassword';
+import SearchProduct from './pages/SearchProduct';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/offers" element={<Offers />} />
+                <Route path="/searchProduct/:key" element={<SearchProduct />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/faq" element={<FAQ />} />

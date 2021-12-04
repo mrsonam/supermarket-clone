@@ -1,7 +1,7 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from 'react-bootstrap';
-import React, {useState, useEffect} from 'react';
+import { Button, ToastContainer, Toast } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
 
 const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
 const apiKey =
@@ -9,53 +9,107 @@ const apiKey =
 const warehouseId = 1;
 const accessToken = localStorage.getItem('accessToken');
 
-const CartContainer = ({item}) => {
-    const [quantity, setQuantity] = useState(item.quantity);
-    const increaseQunatity = () => {
-        setQuantity(quantity + 1);
-        try {
-            updateCart();
-        } catch (err) {
-            console.log(err);
-        }
-        
-    }
-    const decreaseQunatity = () => {
-        if (quantity > 0) setQuantity(quantity - 1)
-    }
-    const updateCart = async () => {
-        let res = await fetch(`${baseURL}/api/v4/cart/${item.id}`, {
+const CartContainer = ({ getCart, item, i }) => {
+    const quantity = item.quantity;
+    const [message, setMessage] = useState('');
+    const [variant, setVariant] = useState('danger');
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleShowToast = () => setShowToast(!showToast);
+    const increaseQunatity = async () => {
+        let res = await fetch(`${baseURL}/api/v4/cart-product/${item.id}`, {
             method: 'PATCH',
             headers: {
                 'Warehouse-Id': warehouseId,
                 Authorization: 'Bearer ' + accessToken,
                 'Api-key': apiKey,
                 'Content-Type': 'application/json',
+                cartProductId: item.id,
             },
             body: JSON.stringify({
-                quantity: quantity
-            })
+                quantity: quantity + 1,
+            }),
         });
-        console.log(res)
-        // if (res.ok) console.log("item Updated")
-    }
+        let data = res.json()
+        if (res.ok) {
+            setMessage('Product Updated');
+            setVariant('success');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            getCart();
+        } else {
+            setMessage(data.errors[0].message);
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+        }
+    };
+    const decreaseQunatity = async () => {
+        let res = await fetch(`${baseURL}/api/v4/cart-product/${item.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Warehouse-Id': warehouseId,
+                Authorization: 'Bearer ' + accessToken,
+                'Api-key': apiKey,
+                'Content-Type': 'application/json',
+                cartProductId: item.id,
+            },
+            body: JSON.stringify({
+                quantity: quantity - 1,
+            }),
+        });
+        console.log(res);
+        let data = res.json()
+        if (res.ok) {
+            setMessage('Product Updated');
+            setVariant('success');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            getCart();
+        } else {
+            setMessage(data.errors[0].message);
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+        }
+    };
     const removeItem = async () => {
-        let res = await fetch(`${baseURL}/api/v4/cart`, {
+        console.log(item.id);
+        let res = await fetch(`${baseURL}/api/v4/cart-product/${item.id.toString()}`, {
             method: 'DELETE',
             headers: {
                 'Warehouse-Id': warehouseId,
                 Authorization: 'Bearer ' + accessToken,
                 'Api-key': apiKey,
-                cartProductId: item.id
+                cartProductId: item.id.toString(),
             },
         });
-        if (res.ok) console.log("item Deleted")
-    }
+        let data = res.json()
+        if (res.ok) {
+            setMessage('Product Deleted');
+            setVariant('success');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            getCart();
+        } else {
+            setMessage(data.errors[0].message);
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+        }
+    };
     return (
+        <>
         <tr className="rem1">
-            <td className="invert">1</td>
+            <td className="invert">{i}</td>
             <td className="invert-image">
-                <a href={item.product.images[0].imageName}>
+                <a href={item.product.images[0].imageName} target="__blank">
                     <img
                         src={item.product.images[0].imageName}
                         alt=" "
@@ -66,11 +120,21 @@ const CartContainer = ({item}) => {
             <td className="invert">
                 <div className="quantity">
                     <div className="quantity-select">
-                        <div className="entry value-minus" onClick={decreaseQunatity}>&nbsp;</div>
+                        <div
+                            className="entry value-minus"
+                            onClick={decreaseQunatity}
+                        >
+                            &nbsp;
+                        </div>
                         <div className="entry value">
                             <span>{quantity}</span>
                         </div>
-                        <div className="entry value-plus active" onClick={increaseQunatity}>&nbsp;</div>
+                        <div
+                            className="entry value-plus active"
+                            onClick={increaseQunatity}
+                        >
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
             </td>
@@ -78,9 +142,20 @@ const CartContainer = ({item}) => {
             <td className="invert">NRs. {item.selectedUnit.sellingPrice}</td>
             <td className="invert">NRs. {item.price}</td>
             <td className="invert">
-                <Button variant="danger" onClick={removeItem}><FontAwesomeIcon icon={faTrash}/></Button>
+                <Button variant="danger" onClick={() => removeItem()}>
+                    <FontAwesomeIcon icon={faTrash} />
+                </Button>
             </td>
         </tr>
+        <ToastContainer position="bottom-end" className="p-3">
+        <Toast show={showToast} onClose={toggleShowToast} bg={variant}>
+            <Toast.Header>
+                <strong className="me-auto">Boa-Fresh</strong>
+            </Toast.Header>
+            <Toast.Body>{message}</Toast.Body>
+        </Toast>
+    </ToastContainer>
+    </>
     );
 };
 

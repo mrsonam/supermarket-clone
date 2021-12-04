@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Spinner } from 'react-bootstrap';
+import { Container, Carousel, Spinner } from 'react-bootstrap';
 import CarouselItem from './CarouselItem';
 
 const MainCarousel = ({ banner }) => {
@@ -11,9 +11,9 @@ const MainCarousel = ({ banner }) => {
                         <CarouselItem key={elem.id} elem={elem} />
                     ))
                 ) : (
-                    <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
+                    <Container><Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner></Container>
                 )}
             </Carousel>
         </div>

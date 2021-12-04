@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Form, Spinner, Card, Button } from 'react-bootstrap';
+import { Row, Col, Form, Spinner, Card, Button, Container } from 'react-bootstrap';
 
 const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
 const apiKey =
@@ -80,60 +80,16 @@ const ProductsByCategories = ({ categoryId }) => {
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                // <Col md={3} className="top_brand_left mb-5">
-                                //     <div className="hover14 column">
-                                //         <div className="agile_top_brand_left_grid">
-                                //             <div className="agile_top_brand_left_grid1">
-                                //                 <figure>
-                                //                     <div className="snipcart-item block">
-                                //                         <div className="snipcart-thumb">
-                                //                             <a href="products.html">
-                                //                                 <Image
-                                //                                     fluid={true}
-                                //                                     title=" "
-                                //                                     alt=" "
-                                //                                     src={
-                                //                                         product
-                                //                                             .images[0]
-                                //                                             .imageName
-                                //                                     }
-                                //                                 />
-                                //                             </a>
-                                //                             <p>
-                                //                                 {product.title}
-                                //                             </p>
-                                //                             <h4>
-                                //                                 NRs.{' '}
-                                //                                 {
-                                //                                     product
-                                //                                         .unitPrice[0]
-                                //                                         .sellingPrice
-                                //                                 }
-                                //                                 {/* <span>$55.00</span> */}
-                                //                             </h4>
-                                //                         </div>
-                                //                         <div className="snipcart-details top_brand_home_details">
-                                //                             <Form>
-                                //                                 <Form.Control
-                                //                                     type="button"
-                                //                                     name="submit"
-                                //                                     value="Add to cart"
-                                //                                     className="button"
-                                //                                 />
-                                //                             </Form>
-                                //                         </div>
-                                //                     </div>
-                                //                 </figure>
-                                //             </div>
-                                //         </div>
-                                //     </div>
-                                // </Col>
                             );
                         })
                     ) : (
-                        <Spinner animation="border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
+                        <Container>
+                            <Spinner animation="border" role="status">
+                                <span className="visually-hidden">
+                                    Loading...
+                                </span>
+                            </Spinner>
+                        </Container>
                     )}
                 </Row>
                 <div className="clearfix"> </div>

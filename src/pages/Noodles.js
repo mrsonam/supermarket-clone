@@ -1,7 +1,7 @@
 import React from 'react'
 import BreadCrumbs from '../Components/BreadCrumbs/BreadCrumbs'
 import { Helmet } from 'react-helmet'
-import NoodlesContainer from '../Components/NoodlesContainer/MomoContainer'
+import NoodlesContainer from '../Components/NoodlesContainer/NoodlesContainer'
 
 const Noodles = () => {
     return (

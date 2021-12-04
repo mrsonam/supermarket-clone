@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form } from 'react-bootstrap';
+import { Container, Form, ToastContainer, Toast } from 'react-bootstrap';
 
 const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
 const apiKey =
@@ -10,8 +10,48 @@ const ChangePasswordForm = () => {
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [variant, setVariant] = useState('danger');
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleShowToast = () => setShowToast(!showToast);
+
+    const changeValidation = () => {
+        if (oldPassword === '') {
+            setMessage('Old Password cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else if (newPassword === '') {
+            setMessage('New Password cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        }else if (confirmPassword === '') {
+            setMessage('Confirm Password cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        }else if (newPassword !== confirmPassword) {
+            setMessage('New Password and Confirm Password must be same');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else {
+            return true;
+        }
+    };
 
     async function changePassword() {
+        if(changeValidation()){
         let res = await fetch(`${baseURL}/api/v4/profile/change-password`, {
             method: 'POST',
             headers: {
@@ -25,8 +65,20 @@ const ChangePasswordForm = () => {
             }),
         });
         let data = await res.json();
-        console.log(data);
-        return data.data;
+        if (res.ok) {
+            setMessage('Password Changed');
+            setVariant('success');
+            if (!showToast) {
+                toggleShowToast();
+            }
+        } else {
+            setMessage(data.errors[0].message);
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+        }
+    }
     }
     return (
         <div className="login">
@@ -65,6 +117,14 @@ const ChangePasswordForm = () => {
                     </Form>
                 </div>
             </Container>
+            <ToastContainer position="bottom-end" className="p-3">
+                <Toast show={showToast} onClose={toggleShowToast} bg={variant}>
+                    <Toast.Header>
+                        <strong className="me-auto">Boa-Fresh</strong>
+                    </Toast.Header>
+                    <Toast.Body>{message}</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </div>
     );
 };

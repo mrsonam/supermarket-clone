@@ -7,6 +7,10 @@ import { NavLink, Link } from 'react-router-dom';
 
 const LoginNavbar = () => {
     const accessToken = localStorage.getItem('accessToken');
+    const logout = () => {
+        localStorage.removeItem('accessToken');
+        window.location.href = "/";
+    }
     return (
         <div className="agileits_header">
             <Container>
@@ -35,7 +39,7 @@ const LoginNavbar = () => {
                                 <NavLink to="/profile">Profile</NavLink>
                             </li>
                             <li>
-                            <NavLink to="/profile">Profile</NavLink>
+                            <NavLink to="/" onClick={logout}>Logout</NavLink>
                         </li>
                         </>
                         )}
@@ -46,9 +50,7 @@ const LoginNavbar = () => {
                     </ul>
                 </div>
                 <div className="product_list_header">
-                    <Form className="last">
-                        <Form.Control type="hidden" name="cmd" value="_cart" />
-                        <Form.Control type="hidden" name="display" value="1" />
+                    <Link to="/checkout">
                         <Button
                             className="w3view-cart"
                             type="button"
@@ -59,8 +61,7 @@ const LoginNavbar = () => {
                                 icon={faCartArrowDown}
                                 className="fa"
                             />
-                        </Button>
-                    </Form>
+                        </Button></Link>
                 </div>
                 <div className="clearfix"> </div>
             </Container>

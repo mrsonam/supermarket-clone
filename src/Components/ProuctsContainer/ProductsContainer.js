@@ -8,7 +8,7 @@ const ProductsContainer = ({products}) => {
         <div className="products">
             <Container>
                 <Row>
-                    {/* <Categories /> */}
+                    <Categories />
                     <ProductsRight products={products}/>
                 </Row>
                 <div className="clearfix"> </div>

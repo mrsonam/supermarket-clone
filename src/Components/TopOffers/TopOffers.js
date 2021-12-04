@@ -40,7 +40,13 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                 </Container>
                             </Tab>
                         ) : (
-                            <div>Loading...</div>
+                            <Container>
+                                <Spinner animation="border" role="status">
+                                    <span className="visually-hidden">
+                                        Loading...
+                                    </span>
+                                </Spinner>
+                            </Container>
                         )}
                         {hotOffers !== undefined ? (
                             <Tab
@@ -67,11 +73,13 @@ const TopOffers = ({ newDishes, hotOffers }) => {
                                 </Container>
                             </Tab>
                         ) : (
-                            <Spinner animation="border" role="status">
-                                <span className="visually-hidden">
-                                    Loading...
-                                </span>
-                            </Spinner>
+                            <Container>
+                                <Spinner animation="border" role="status">
+                                    <span className="visually-hidden">
+                                        Loading...
+                                    </span>
+                                </Spinner>
+                            </Container>
                         )}
                     </Tabs>
                 </div>

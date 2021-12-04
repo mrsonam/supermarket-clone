@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form } from 'react-bootstrap';
+import { Container, Form, ToastContainer, Toast } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -15,25 +15,63 @@ const warehouseId = 1;
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [variant, setVariant] = useState('danger');
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleShowToast = () => setShowToast(!showToast);
+
+    const loginValidation = () => {
+        if (email === '') {
+            console.log("empty")
+            setMessage('Email cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else if (password === '') {
+            setMessage('Password cannot be empty');
+            setVariant('danger');
+            if (!showToast) {
+                toggleShowToast();
+            }
+            return false;
+        } else {
+            return true;
+        }
+    };
 
     async function login() {
-        let res = await fetch(`${baseURL}/api/v4/auth/login`, {
-            method: 'POST',
-            headers: {
-                'Warehouse-Id': warehouseId,
-                'Api-key': apiKey,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                client_id: clientId,
-                client_secret: clientSecret,
-                grant_type: grantType,
-                username: email,
-                password: password,
-            }),
-        });
-        let data = await res.json();
-        if (res.ok) localStorage.setItem('accessToken', data.access_token);
+        if (loginValidation) {
+            let res = await fetch(`${baseURL}/api/v4/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Warehouse-Id': warehouseId,
+                    'Api-key': apiKey,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    client_id: clientId,
+                    client_secret: clientSecret,
+                    grant_type: grantType,
+                    username: email,
+                    password: password,
+                }),
+            });
+            let data = await res.json();
+            if (res.ok) {
+                localStorage.setItem('accessToken', data.access_token);
+                window.location.href = '/';
+            }
+            else{
+                setMessage(data.errors[0].message);
+                setVariant('danger');
+                if (!showToast) {
+                    toggleShowToast();
+                }
+            }
+        }
     }
     return (
         <div className="login">
@@ -75,6 +113,14 @@ const LoginForm = () => {
                     </Link>
                 </p>
             </Container>
+            <ToastContainer position="bottom-end" className="p-3">
+                <Toast show={showToast} onClose={toggleShowToast} bg={variant}>
+                    <Toast.Header>
+                        <strong className="me-auto">Boa-Fresh</strong>
+                    </Toast.Header>
+                    <Toast.Body>{message}</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </div>
     );
 };

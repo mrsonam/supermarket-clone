@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Image, Spinner } from 'react-bootstrap';
+import { Container, Carousel, Image, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const HomeCarousel = ({ banner }) => {
@@ -20,9 +20,9 @@ const HomeCarousel = ({ banner }) => {
                         </Carousel.Item>
                     ))
                 ) : (
-                    <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
+                    <Container><Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner></Container>
                 )}
             </Carousel>
         </div>
