@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import BannerBottom from '../Components/BannerBottom/BannerBottom'
 import BrandStore from '../Components/BrandStore/BrandStore'
 import HomeCarousel from '../Components/Carousel/HomeCarousel'
@@ -22,12 +22,17 @@ const Home = () => {
             },
         });
         let data = await res.json();
-        // console.log(data.data);
-        return data.data;
+        if (res.ok) {
+            setHome(data.data);
+        } else {
+            throw data.errors[0].message;
+        }
     }
-    useEffect(() => {
-        getHome().then(data => setHome(data));
-    }, [])
+    try {
+        getHome();
+    } catch (err) {
+        console.log(err);
+    }
     
     return (
         <div>

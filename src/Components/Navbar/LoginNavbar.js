@@ -6,6 +6,7 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, Link } from 'react-router-dom';
 
 const LoginNavbar = () => {
+    const accessToken = localStorage.getItem('accessToken');
     return (
         <div className="agileits_header">
             <Container>
@@ -17,12 +18,28 @@ const LoginNavbar = () => {
                 </div>
                 <div className="agile-login">
                     <ul>
-                        <li>
-                            <NavLink to="/signup">Create Account</NavLink>
+                        {accessToken === null ? (
+                            <>
+                                <li>
+                                    <NavLink to="/signup">
+                                        Create Account
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/login">Login</NavLink>
+                                </li>
+                            </>
+                        ) : (
+                            <>
+                            <li>
+                                <NavLink to="/profile">Profile</NavLink>
+                            </li>
+                            <li>
+                            <NavLink to="/profile">Profile</NavLink>
                         </li>
-                        <li>
-                            <NavLink to="/login">Login</NavLink>
-                        </li>
+                        </>
+                        )}
+
                         <li>
                             <NavLink to="/contact">Help</NavLink>
                         </li>

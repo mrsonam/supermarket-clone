@@ -3,6 +3,8 @@ import { Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const baseURL = "https://uat.ordering-boafresh.ekbana.net";
+const apiKey = "fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545";
+const warehouseId = 1;
 
 const RegistrationForm = () => {
     //states for form handling
@@ -16,6 +18,11 @@ const RegistrationForm = () => {
     async function signUp() {
         let res = await fetch(`${baseURL}/api/v4/auth/signup`, {
             method: 'POST',
+            headers: {
+                "Warehouse-Id": warehouseId,
+                "Api-key": apiKey,
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({
                 "first_name": firstName,
                 "last_name": lastName,

@@ -1,6 +1,6 @@
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
 
@@ -23,12 +23,13 @@ const Categories = () => {
             },
         );
         let data = await res.json();
-        console.log(data.data);
-        return data.data;
+        if(res.ok) setCategories(data.data)
     }
-    useEffect(() => {
-        getCategories().then((data) => setCategories(data));
-    });
+    try {
+        getCategories();
+    } catch (err) {
+        console.log(err);
+    }
     return (
         <Col md={3} className="products-left">
             <div className="categories">

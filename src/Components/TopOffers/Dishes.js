@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Image, Form, Card, Button } from 'react-bootstrap';
+import { Col,Card, Button } from 'react-bootstrap';
 
 const Dishes = ({ dishes }) => {
         return (
@@ -14,13 +14,13 @@ const Dishes = ({ dishes }) => {
                                                 {dishes.title}
                                             </Card.Title>
                                             <Card.Text>
-                                                <h5>
+                                                
                                                     NRs.{' '}
                                                     {
                                                         dishes.unitPrice[0]
                                                             .sellingPrice
                                                     }
-                                                </h5>
+                                                
                                             </Card.Text>
                                             <Button variant="outline-success">
                                                 Add To Cart

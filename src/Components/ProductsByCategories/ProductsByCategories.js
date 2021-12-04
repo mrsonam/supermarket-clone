@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Row, Col, Form, Image, Spinner, Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Row, Col, Form, Spinner, Card, Button } from 'react-bootstrap';
 
 const baseURL = 'https://uat.ordering-boafresh.ekbana.net';
 const apiKey =
@@ -20,12 +20,13 @@ const ProductsByCategories = ({ categoryId }) => {
             },
         );
         let data = await res.json();
-        console.log(data.data);
-        return data.data;
+        if (res.ok) setProducts(data.data);
     }
-    useEffect(() => {
-        getProducts().then((data) => setProducts(data));
-    });
+    try {
+        getProducts();
+    } catch (err) {
+        console.log(err);
+    }
     return (
         <Col md={9} className="products-right">
             <div className="products-right-grid">
